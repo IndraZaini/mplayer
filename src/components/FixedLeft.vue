@@ -4,7 +4,7 @@
     <ul>
       <li><router-link :class="{'active' : 'Home' == current || '/' == current}" to="/home"><div class="logo"><img src="../assets/home.png"></div>Home</router-link></li>
       <li><router-link :class="{'active' : 'Search' == current}" to="/search"><div class="logo"><img src="../assets/search.png"></div>Search</router-link></li>
-      <li><router-link :class="{'active' : current.includes('YourLib')}" to="/yourlibrary"><div class="logo"><img src="../assets/list-text.png"></div>Your Library</router-link></li>
+      <li><router-link :class="{'active' : current == 'YourLib'}" to="/yourlibrary"><div class="logo"><img src="../assets/list-text.png"></div>Your Library</router-link></li>
     </ul>
     <div class="playlists">
       <div class="title">playlists</div>

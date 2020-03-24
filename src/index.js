@@ -10,3 +10,4 @@ new Vue({
     store: store,
     router: router,
 }).$mount('#app')
+
