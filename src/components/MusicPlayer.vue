@@ -48,7 +48,7 @@ export default {
       this.audio.pause()
       this.playing = false
       this.audio.src = ''
-      this.audio = new Audio(window.URL.createObjectURL(this.song.dir))
+      this.audio = new Audio(this.song.dir)
       this.audio.volume = this.vol,
       this.audio.onloadedmetadata = () => {
         this.maxdur = this.audio.duration

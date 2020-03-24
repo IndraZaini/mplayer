@@ -55,17 +55,8 @@ module.exports = {
             }
           }]
         },
-        {
-          test: /\.mp3$/,
-          use: [{
-            loader: 'file-loader',
-            options: {
-              limit: 10000,
-              name: 'assets/[hash]-[name].[ext]',
-              esModule: false,
-            }
-          }]
-        }
+        
+        
       ]
     },
     resolve: {
