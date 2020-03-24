@@ -27,7 +27,10 @@ export default {
   },
   computed: {
     current() {
-      return this.$route.name
+      if(this.$route.name == null)
+        return 'Home'
+      else
+        return this.$route.name
     }
   }
 }
