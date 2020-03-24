@@ -50,11 +50,22 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 10000,
-              name: 'https://indrazaini.github.io/assets/[hash]-[name].[ext]',
+              name: 'assets/[hash]-[name].[ext]',
               esModule: false,
             }
           }]
         },
+        {
+          test: /\.mp3$/,
+          use: [{
+            loader: 'file-loader',
+            options: {
+              limit: 10000,
+              name: 'assets/[hash]-[name].[ext]',
+              esModule: false,
+            }
+          }]
+        }
       ]
     },
     resolve: {
