@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "513bb3c8dc90b44cb924";
+/******/ 	var hotCurrentHash = "15bc7f0b1081a9c493f2";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1238,9 +1238,9 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
   !*** ./src/assets/Songs/test.mp3 ***!
   \***********************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/assets/bccfcd3545759573880d86348791762c-test.mp3\";\n\n//# sourceURL=webpack:///./src/assets/Songs/test.mp3?");
+eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvYmNjZmNkMzU0NTc1OTU3Mzg4MGQ4NjM0ODc5MTc2MmMtdGVzdC5tcDMiOw==\"\n\n//# sourceURL=webpack:///./src/assets/Songs/test.mp3?");
 
 /***/ }),
 
@@ -1249,9 +1249,9 @@ eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/as
   !*** ./src/assets/Songs/test1.mp3 ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/assets/d3db0dd8e51e7bec91e674491151f341-test1.mp3\";\n\n//# sourceURL=webpack:///./src/assets/Songs/test1.mp3?");
+eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvZDNkYjBkZDhlNTFlN2JlYzkxZTY3NDQ5MTE1MWYzNDEtdGVzdDEubXAzIjs=\"\n\n//# sourceURL=webpack:///./src/assets/Songs/test1.mp3?");
 
 /***/ }),
 
@@ -1260,9 +1260,9 @@ eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/as
   !*** ./src/assets/Songs/test2.mp3 ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/assets/10edb199c82a62cf77372774b6dec191-test2.mp3\";\n\n//# sourceURL=webpack:///./src/assets/Songs/test2.mp3?");
+eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvMTBlZGIxOTljODJhNjJjZjc3MzcyNzc0YjZkZWMxOTEtdGVzdDIubXAzIjs=\"\n\n//# sourceURL=webpack:///./src/assets/Songs/test2.mp3?");
 
 /***/ }),
 
@@ -1271,9 +1271,9 @@ eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/as
   !*** ./src/assets/Songs/test3.mp3 ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/assets/b9c6fc1b924ced12ab1577ef9390b9e5-test3.mp3\";\n\n//# sourceURL=webpack:///./src/assets/Songs/test3.mp3?");
+eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvYjljNmZjMWI5MjRjZWQxMmFiMTU3N2VmOTM5MGI5ZTUtdGVzdDMubXAzIjs=\"\n\n//# sourceURL=webpack:///./src/assets/Songs/test3.mp3?");
 
 /***/ }),
 
@@ -1282,9 +1282,9 @@ eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/as
   !*** ./src/assets/Songs/test4.mp3 ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/assets/9f00edd55fd3a71838f6d4163b0aec46-test4.mp3\";\n\n//# sourceURL=webpack:///./src/assets/Songs/test4.mp3?");
+eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvOWYwMGVkZDU1ZmQzYTcxODM4ZjZkNDE2M2IwYWVjNDYtdGVzdDQubXAzIjs=\"\n\n//# sourceURL=webpack:///./src/assets/Songs/test4.mp3?");
 
 /***/ }),
 
@@ -1293,9 +1293,9 @@ eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/as
   !*** ./src/assets/Songs/test5.mp3 ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/assets/b5132848bb5669829093ddad79ca525a-test5.mp3\";\n\n//# sourceURL=webpack:///./src/assets/Songs/test5.mp3?");
+eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvYjUxMzI4NDhiYjU2Njk4MjkwOTNkZGFkNzljYTUyNWEtdGVzdDUubXAzIjs=\"\n\n//# sourceURL=webpack:///./src/assets/Songs/test5.mp3?");
 
 /***/ }),
 
@@ -1304,9 +1304,9 @@ eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/as
   !*** ./src/assets/Songs/test6.mp3 ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/assets/2c1251d57fb2ee182ac6d4f81de2a3bc-test6.mp3\";\n\n//# sourceURL=webpack:///./src/assets/Songs/test6.mp3?");
+eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvMmMxMjUxZDU3ZmIyZWUxODJhYzZkNGY4MWRlMmEzYmMtdGVzdDYubXAzIjs=\"\n\n//# sourceURL=webpack:///./src/assets/Songs/test6.mp3?");
 
 /***/ }),
 
@@ -1315,9 +1315,9 @@ eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/as
   !*** ./src/assets/Songs/test7.mp3 ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/assets/a73b765c83a5fd478379f39ed5466b6a-test7.mp3\";\n\n//# sourceURL=webpack:///./src/assets/Songs/test7.mp3?");
+eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvYTczYjc2NWM4M2E1ZmQ0NzgzNzlmMzllZDU0NjZiNmEtdGVzdDcubXAzIjs=\"\n\n//# sourceURL=webpack:///./src/assets/Songs/test7.mp3?");
 
 /***/ }),
 
@@ -1326,9 +1326,9 @@ eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/as
   !*** ./src/assets/Songs/test8.mp3 ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/assets/5c54ae5f7588dd727645d61b9caeec3f-test8.mp3\";\n\n//# sourceURL=webpack:///./src/assets/Songs/test8.mp3?");
+eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvNWM1NGFlNWY3NTg4ZGQ3Mjc2NDVkNjFiOWNhZWVjM2YtdGVzdDgubXAzIjs=\"\n\n//# sourceURL=webpack:///./src/assets/Songs/test8.mp3?");
 
 /***/ }),
 
@@ -1337,9 +1337,9 @@ eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/as
   !*** ./src/assets/Songs/test9.mp3 ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/assets/903f6c875e02674bdc2d11c693d54dd0-test9.mp3\";\n\n//# sourceURL=webpack:///./src/assets/Songs/test9.mp3?");
+eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvOTAzZjZjODc1ZTAyNjc0YmRjMmQxMWM2OTNkNTRkZDAtdGVzdDkubXAzIjs=\"\n\n//# sourceURL=webpack:///./src/assets/Songs/test9.mp3?");
 
 /***/ }),
 
@@ -1394,7 +1394,7 @@ eval("module.exports = \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIAC
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/assets/bbfedc31c47d03201028acb8f1444f80-heart1.png\";\n\n//# sourceURL=webpack:///./src/assets/heart1.png?");
+eval("module.exports = __webpack_require__.p + \"assets/bbfedc31c47d03201028acb8f1444f80-heart1.png\";\n\n//# sourceURL=webpack:///./src/assets/heart1.png?");
 
 /***/ }),
 
@@ -1460,7 +1460,7 @@ eval("module.exports = \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIAC
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/assets/cb54f71077674605e75f5fdb029ab3a4-play-button.png\";\n\n//# sourceURL=webpack:///./src/assets/play-button.png?");
+eval("module.exports = __webpack_require__.p + \"assets/cb54f71077674605e75f5fdb029ab3a4-play-button.png\";\n\n//# sourceURL=webpack:///./src/assets/play-button.png?");
 
 /***/ }),
 
@@ -1504,7 +1504,7 @@ eval("module.exports = \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIAC
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/assets/6e905f42069e6169660f259e0f1ebd22-search.png\";\n\n//# sourceURL=webpack:///./src/assets/search.png?");
+eval("module.exports = __webpack_require__.p + \"assets/6e905f42069e6169660f259e0f1ebd22-search.png\";\n\n//# sourceURL=webpack:///./src/assets/search.png?");
 
 /***/ }),
 
@@ -1515,7 +1515,7 @@ eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/as
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/assets/cc2ae613ebfd7ab1c36fa97037f96d2d-shuffle1.png\";\n\n//# sourceURL=webpack:///./src/assets/shuffle1.png?");
+eval("module.exports = __webpack_require__.p + \"assets/cc2ae613ebfd7ab1c36fa97037f96d2d-shuffle1.png\";\n\n//# sourceURL=webpack:///./src/assets/shuffle1.png?");
 
 /***/ }),
 
@@ -1526,7 +1526,7 @@ eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/as
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"https://indrazaini.github.io/assets/c1742f9e1c6f8612fde2088049114ce2-volume.png\";\n\n//# sourceURL=webpack:///./src/assets/volume.png?");
+eval("module.exports = __webpack_require__.p + \"assets/c1742f9e1c6f8612fde2088049114ce2-volume.png\";\n\n//# sourceURL=webpack:///./src/assets/volume.png?");
 
 /***/ }),
 
