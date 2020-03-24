@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "fb476381c8516bd12606";
+/******/ 	var hotCurrentHash = "a1ae6c92e600af25962c";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -851,7 +851,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _index = __webpack_require__(/*! ../index */ \"./src/index.js\");\n\nexports.default = {\n  name: 'MusicPlayer',\n  data: function data() {\n    return {\n      playing: false,\n      currentdur: 0,\n      audio: new Audio(),\n      maxdur: 0,\n      vol: 1\n    };\n  },\n  mounted: function mounted() {\n    var _this = this;\n\n    _index.bus.$on('resetSong', function () {\n      _this.audio.pause();\n      _this.playing = false;\n      _this.audio.src = '';\n      _this.audio = new Audio(window.URL.createObjectURL(_this.song.dir));\n      _this.audio.volume = _this.vol, _this.audio.onloadedmetadata = function () {\n        _this.maxdur = _this.audio.duration;\n        _this.currentdur = _this.audio.currentTime;\n      };\n      _this.audio.ontimeupdate = function () {\n        _this.currentdur = _this.audio.currentTime;\n      };\n    });\n  },\n\n  watch: {\n    vol: function vol(newValue) {\n      this.audio.volume = newValue;\n    }\n  },\n  computed: {\n    audioSource: function audioSource() {\n      return this.songs;\n    },\n    currentMin: function currentMin() {\n      return (this.currentdur / 60).toFixed();\n    },\n    maxMin: function maxMin() {\n      return (this.maxdur / 60).toFixed();\n    },\n    currentSec: function currentSec() {\n      if ((this.currentdur % 60).toFixed() > 9) return (this.currentdur % 60).toFixed();else return '0' + (this.currentdur % 60).toFixed();\n    },\n    maxSec: function maxSec() {\n      if ((this.maxdur % 60).toFixed() > 9) return (this.maxdur % 60).toFixed();else return '0' + (this.maxdur % 60).toFixed();\n    },\n\n    changecurrenttime: {\n      get: function get() {\n        return this.currentdur;\n      },\n      set: function set(value) {\n        this.audio.currentTime = value;\n      }\n    },\n    song: {\n      get: function get() {\n        return this.$store.state.playingsong;\n      }\n    }\n  },\n  methods: {\n    addLiked: function addLiked() {\n      this.$store.dispatch('likeSong', this.song.id);\n    },\n    play: function play(song) {\n      this.playing ? this.audio.pause() : this.audio.play();\n      this.playing = !this.playing;\n    }\n  }\n}; //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n//# sourceURL=webpack:///./src/components/MusicPlayer.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _index = __webpack_require__(/*! ../index */ \"./src/index.js\");\n\nexports.default = {\n  name: 'MusicPlayer',\n  data: function data() {\n    return {\n      playing: false,\n      currentdur: 0,\n      audio: new Audio(),\n      maxdur: 0,\n      vol: 1\n    };\n  },\n  mounted: function mounted() {\n    var _this = this;\n\n    _index.bus.$on('resetSong', function () {\n      _this.audio.pause();\n      _this.playing = false;\n      _this.audio.src = '';\n      _this.audio = new Audio(_this.song.dir);\n      _this.audio.volume = _this.vol, _this.audio.onloadedmetadata = function () {\n        _this.maxdur = _this.audio.duration;\n        _this.currentdur = _this.audio.currentTime;\n      };\n      _this.audio.ontimeupdate = function () {\n        _this.currentdur = _this.audio.currentTime;\n      };\n    });\n  },\n\n  watch: {\n    vol: function vol(newValue) {\n      this.audio.volume = newValue;\n    }\n  },\n  computed: {\n    audioSource: function audioSource() {\n      return this.songs;\n    },\n    currentMin: function currentMin() {\n      return (this.currentdur / 60).toFixed();\n    },\n    maxMin: function maxMin() {\n      return (this.maxdur / 60).toFixed();\n    },\n    currentSec: function currentSec() {\n      if ((this.currentdur % 60).toFixed() > 9) return (this.currentdur % 60).toFixed();else return '0' + (this.currentdur % 60).toFixed();\n    },\n    maxSec: function maxSec() {\n      if ((this.maxdur % 60).toFixed() > 9) return (this.maxdur % 60).toFixed();else return '0' + (this.maxdur % 60).toFixed();\n    },\n\n    changecurrenttime: {\n      get: function get() {\n        return this.currentdur;\n      },\n      set: function set(value) {\n        this.audio.currentTime = value;\n      }\n    },\n    song: {\n      get: function get() {\n        return this.$store.state.playingsong;\n      }\n    }\n  },\n  methods: {\n    addLiked: function addLiked() {\n      this.$store.dispatch('likeSong', this.song.id);\n    },\n    play: function play(song) {\n      this.playing ? this.audio.pause() : this.audio.play();\n      this.playing = !this.playing;\n    }\n  }\n}; //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n//# sourceURL=webpack:///./src/components/MusicPlayer.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -1238,9 +1238,9 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
   !*** ./src/assets/Songs/test.mp3 ***!
   \***********************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvYmNjZmNkMzU0NTc1OTU3Mzg4MGQ4NjM0ODc5MTc2MmMtdGVzdC5tcDMiOw==\"\n\n//# sourceURL=webpack:///./src/assets/Songs/test.mp3?");
+eval("module.exports = __webpack_require__.p + \"assets/bccfcd3545759573880d86348791762c-test.mp3\";\n\n//# sourceURL=webpack:///./src/assets/Songs/test.mp3?");
 
 /***/ }),
 
@@ -1249,9 +1249,9 @@ eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBh
   !*** ./src/assets/Songs/test1.mp3 ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvZDNkYjBkZDhlNTFlN2JlYzkxZTY3NDQ5MTE1MWYzNDEtdGVzdDEubXAzIjs=\"\n\n//# sourceURL=webpack:///./src/assets/Songs/test1.mp3?");
+eval("module.exports = __webpack_require__.p + \"assets/d3db0dd8e51e7bec91e674491151f341-test1.mp3\";\n\n//# sourceURL=webpack:///./src/assets/Songs/test1.mp3?");
 
 /***/ }),
 
@@ -1260,9 +1260,9 @@ eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBh
   !*** ./src/assets/Songs/test2.mp3 ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvMTBlZGIxOTljODJhNjJjZjc3MzcyNzc0YjZkZWMxOTEtdGVzdDIubXAzIjs=\"\n\n//# sourceURL=webpack:///./src/assets/Songs/test2.mp3?");
+eval("module.exports = __webpack_require__.p + \"assets/10edb199c82a62cf77372774b6dec191-test2.mp3\";\n\n//# sourceURL=webpack:///./src/assets/Songs/test2.mp3?");
 
 /***/ }),
 
@@ -1271,9 +1271,9 @@ eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBh
   !*** ./src/assets/Songs/test3.mp3 ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvYjljNmZjMWI5MjRjZWQxMmFiMTU3N2VmOTM5MGI5ZTUtdGVzdDMubXAzIjs=\"\n\n//# sourceURL=webpack:///./src/assets/Songs/test3.mp3?");
+eval("module.exports = __webpack_require__.p + \"assets/b9c6fc1b924ced12ab1577ef9390b9e5-test3.mp3\";\n\n//# sourceURL=webpack:///./src/assets/Songs/test3.mp3?");
 
 /***/ }),
 
@@ -1282,9 +1282,9 @@ eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBh
   !*** ./src/assets/Songs/test4.mp3 ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvOWYwMGVkZDU1ZmQzYTcxODM4ZjZkNDE2M2IwYWVjNDYtdGVzdDQubXAzIjs=\"\n\n//# sourceURL=webpack:///./src/assets/Songs/test4.mp3?");
+eval("module.exports = __webpack_require__.p + \"assets/9f00edd55fd3a71838f6d4163b0aec46-test4.mp3\";\n\n//# sourceURL=webpack:///./src/assets/Songs/test4.mp3?");
 
 /***/ }),
 
@@ -1293,9 +1293,9 @@ eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBh
   !*** ./src/assets/Songs/test5.mp3 ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvYjUxMzI4NDhiYjU2Njk4MjkwOTNkZGFkNzljYTUyNWEtdGVzdDUubXAzIjs=\"\n\n//# sourceURL=webpack:///./src/assets/Songs/test5.mp3?");
+eval("module.exports = __webpack_require__.p + \"assets/b5132848bb5669829093ddad79ca525a-test5.mp3\";\n\n//# sourceURL=webpack:///./src/assets/Songs/test5.mp3?");
 
 /***/ }),
 
@@ -1304,9 +1304,9 @@ eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBh
   !*** ./src/assets/Songs/test6.mp3 ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvMmMxMjUxZDU3ZmIyZWUxODJhYzZkNGY4MWRlMmEzYmMtdGVzdDYubXAzIjs=\"\n\n//# sourceURL=webpack:///./src/assets/Songs/test6.mp3?");
+eval("module.exports = __webpack_require__.p + \"assets/2c1251d57fb2ee182ac6d4f81de2a3bc-test6.mp3\";\n\n//# sourceURL=webpack:///./src/assets/Songs/test6.mp3?");
 
 /***/ }),
 
@@ -1315,9 +1315,9 @@ eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBh
   !*** ./src/assets/Songs/test7.mp3 ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvYTczYjc2NWM4M2E1ZmQ0NzgzNzlmMzllZDU0NjZiNmEtdGVzdDcubXAzIjs=\"\n\n//# sourceURL=webpack:///./src/assets/Songs/test7.mp3?");
+eval("module.exports = __webpack_require__.p + \"assets/a73b765c83a5fd478379f39ed5466b6a-test7.mp3\";\n\n//# sourceURL=webpack:///./src/assets/Songs/test7.mp3?");
 
 /***/ }),
 
@@ -1326,9 +1326,9 @@ eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBh
   !*** ./src/assets/Songs/test8.mp3 ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvNWM1NGFlNWY3NTg4ZGQ3Mjc2NDVkNjFiOWNhZWVjM2YtdGVzdDgubXAzIjs=\"\n\n//# sourceURL=webpack:///./src/assets/Songs/test8.mp3?");
+eval("module.exports = __webpack_require__.p + \"assets/5c54ae5f7588dd727645d61b9caeec3f-test8.mp3\";\n\n//# sourceURL=webpack:///./src/assets/Songs/test8.mp3?");
 
 /***/ }),
 
@@ -1337,9 +1337,9 @@ eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBh
   !*** ./src/assets/Songs/test9.mp3 ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = \"data:audio/mpeg;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJhc3NldHMvOTAzZjZjODc1ZTAyNjc0YmRjMmQxMWM2OTNkNTRkZDAtdGVzdDkubXAzIjs=\"\n\n//# sourceURL=webpack:///./src/assets/Songs/test9.mp3?");
+eval("module.exports = __webpack_require__.p + \"assets/903f6c875e02674bdc2d11c693d54dd0-test9.mp3\";\n\n//# sourceURL=webpack:///./src/assets/Songs/test9.mp3?");
 
 /***/ }),
 
@@ -2018,7 +2018,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _vue = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.esm.js\");\n\nvar _vue2 = _interopRequireDefault(_vue);\n\nvar _vueRouter = __webpack_require__(/*! vue-router */ \"./node_modules/vue-router/dist/vue-router.esm.js\");\n\nvar _vueRouter2 = _interopRequireDefault(_vueRouter);\n\nvar _Home = __webpack_require__(/*! ./components/Home.vue */ \"./src/components/Home.vue\");\n\nvar _Home2 = _interopRequireDefault(_Home);\n\nvar _Search = __webpack_require__(/*! ./components/Search.vue */ \"./src/components/Search.vue\");\n\nvar _Search2 = _interopRequireDefault(_Search);\n\nvar _YourLibrary = __webpack_require__(/*! ./components/YourLibrary.vue */ \"./src/components/YourLibrary.vue\");\n\nvar _YourLibrary2 = _interopRequireDefault(_YourLibrary);\n\nvar _Playlists = __webpack_require__(/*! ./components/Playlists.vue */ \"./src/components/Playlists.vue\");\n\nvar _Playlists2 = _interopRequireDefault(_Playlists);\n\nvar _Podcasts = __webpack_require__(/*! ./components/Podcasts.vue */ \"./src/components/Podcasts.vue\");\n\nvar _Podcasts2 = _interopRequireDefault(_Podcasts);\n\nvar _Artists = __webpack_require__(/*! ./components/Artists.vue */ \"./src/components/Artists.vue\");\n\nvar _Artists2 = _interopRequireDefault(_Artists);\n\nvar _Albums = __webpack_require__(/*! ./components/Albums.vue */ \"./src/components/Albums.vue\");\n\nvar _Albums2 = _interopRequireDefault(_Albums);\n\nvar _Liked = __webpack_require__(/*! ./components/Liked.vue */ \"./src/components/Liked.vue\");\n\nvar _Liked2 = _interopRequireDefault(_Liked);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n_vue2.default.use(_vueRouter2.default);\n\nexports.default = new _vueRouter2.default({\n  mode: 'history',\n  base: '/',\n  routes: [{\n    path: '',\n    redirect: {\n      path: '/home',\n      name: 'Home'\n    }\n  }, {\n    path: '/home',\n    name: 'Home',\n    component: _Home2.default\n  }, {\n    path: '/search',\n    name: 'Search',\n    component: _Search2.default\n  }, {\n    path: '/liked',\n    name: 'Liked',\n    component: _Liked2.default\n  }, {\n    path: '/yourlibrary',\n    component: _YourLibrary2.default,\n    children: [{\n      path: '',\n      redirect: {\n        name: 'YourLibPlaylists'\n      }\n    }, {\n      path: '/playlists',\n      name: 'YourLibPlaylists',\n      component: _Playlists2.default\n    }, {\n      path: '/podcasts',\n      name: 'YourLibPodcasts',\n      component: _Podcasts2.default\n    }, {\n      path: '/artists',\n      name: 'YourLibArtists',\n      component: _Artists2.default\n    }, {\n      path: '/albums',\n      name: 'YourLibAlbums',\n      component: _Albums2.default\n    }]\n  }]\n});\n\n//# sourceURL=webpack:///./src/router.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _vue = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.esm.js\");\n\nvar _vue2 = _interopRequireDefault(_vue);\n\nvar _vueRouter = __webpack_require__(/*! vue-router */ \"./node_modules/vue-router/dist/vue-router.esm.js\");\n\nvar _vueRouter2 = _interopRequireDefault(_vueRouter);\n\nvar _Home = __webpack_require__(/*! ./components/Home.vue */ \"./src/components/Home.vue\");\n\nvar _Home2 = _interopRequireDefault(_Home);\n\nvar _Search = __webpack_require__(/*! ./components/Search.vue */ \"./src/components/Search.vue\");\n\nvar _Search2 = _interopRequireDefault(_Search);\n\nvar _YourLibrary = __webpack_require__(/*! ./components/YourLibrary.vue */ \"./src/components/YourLibrary.vue\");\n\nvar _YourLibrary2 = _interopRequireDefault(_YourLibrary);\n\nvar _Playlists = __webpack_require__(/*! ./components/Playlists.vue */ \"./src/components/Playlists.vue\");\n\nvar _Playlists2 = _interopRequireDefault(_Playlists);\n\nvar _Podcasts = __webpack_require__(/*! ./components/Podcasts.vue */ \"./src/components/Podcasts.vue\");\n\nvar _Podcasts2 = _interopRequireDefault(_Podcasts);\n\nvar _Artists = __webpack_require__(/*! ./components/Artists.vue */ \"./src/components/Artists.vue\");\n\nvar _Artists2 = _interopRequireDefault(_Artists);\n\nvar _Albums = __webpack_require__(/*! ./components/Albums.vue */ \"./src/components/Albums.vue\");\n\nvar _Albums2 = _interopRequireDefault(_Albums);\n\nvar _Liked = __webpack_require__(/*! ./components/Liked.vue */ \"./src/components/Liked.vue\");\n\nvar _Liked2 = _interopRequireDefault(_Liked);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n_vue2.default.use(_vueRouter2.default);\n\nexports.default = new _vueRouter2.default({\n  mode: 'history',\n  base: '/',\n  routes: [{\n    path: '',\n    redirect: {\n      name: 'Home'\n    }\n  }, {\n    path: '/home',\n    name: 'Home',\n    component: _Home2.default\n  }, {\n    path: '/search',\n    name: 'Search',\n    component: _Search2.default\n  }, {\n    path: '/liked',\n    name: 'Liked',\n    component: _Liked2.default\n  }, {\n    path: '/yourlibrary',\n    component: _YourLibrary2.default,\n    children: [{\n      path: '',\n      redirect: {\n        name: 'YourLibPlaylists'\n      }\n    }, {\n      path: '/playlists',\n      name: 'YourLibPlaylists',\n      component: _Playlists2.default\n    }, {\n      path: '/podcasts',\n      name: 'YourLibPodcasts',\n      component: _Podcasts2.default\n    }, {\n      path: '/artists',\n      name: 'YourLibArtists',\n      component: _Artists2.default\n    }, {\n      path: '/albums',\n      name: 'YourLibAlbums',\n      component: _Albums2.default\n    }]\n  }]\n});\n\n//# sourceURL=webpack:///./src/router.js?");
 
 /***/ }),
 
