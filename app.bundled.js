@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "72a7c45de50f10c10314";
+/******/ 	var hotCurrentHash = "5d280eaee3840195a287";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -863,7 +863,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _router = __webpack_require__(/*! ../router */ \"./src/router.js\");\n\nvar _router2 = _interopRequireDefault(_router);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = {\n  name: 'NavTop',\n  data: function data() {\n    return {};\n  },\n\n  computed: {\n    current: function current() {\n      return this.$route.name;\n    }\n  },\n  methods: {\n    goBack: function goBack() {\n      _router2.default.go(-1);\n    },\n    goNext: function goNext() {\n      _router2.default.go(1);\n    }\n  }\n}; //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n//# sourceURL=webpack:///./src/components/NavTop.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _router = __webpack_require__(/*! ../router */ \"./src/router.js\");\n\nvar _router2 = _interopRequireDefault(_router);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = {\n  name: 'NavTop',\n  data: function data() {\n    return {};\n  },\n\n  computed: {\n    current: function current() {\n      if (this.$route.name == null) return 'Home';else return this.$route.name;\n    }\n  },\n  methods: {\n    goBack: function goBack() {\n      _router2.default.go(-1);\n    },\n    goNext: function goNext() {\n      _router2.default.go(1);\n    }\n  }\n}; //\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n//# sourceURL=webpack:///./src/components/NavTop.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
