@@ -50,7 +50,7 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 10000,
-              name: 'assets/[hash]-[name].[ext]',
+              name: 'https://indrazaini.github.io/assets/[hash]-[name].[ext]',
               esModule: false,
             }
           }]
