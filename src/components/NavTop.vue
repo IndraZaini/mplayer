@@ -3,12 +3,12 @@
     <div class="back" @click="goBack"></div>
     <div class="next" @click="goNext"></div>
     <input v-if="current == 'Search'" class="search" placeholder="Search for Artists, Songs, or Podcasts"> 
-    <div v-if="current.includes('YourLib')" class="library">
+    <div v-if="!!~current.indexOf('YourLib')" class="library">
       <ul>
-        <li><router-link :class="{'active':current.includes('Playlists')}" to="/playlists">Playlists</router-link></li>
-        <li><router-link :class="{'active':current.includes('Podcasts')}" to="/podcasts">Podcasts</router-link></li>
-        <li><router-link :class="{'active':current.includes('Artists')}" to="/artists">Artists</router-link></li>
-        <li><router-link :class="{'active':current.includes('Albums')}" to="/albums">Albums</router-link></li>
+        <li><router-link :class="{'active':!!~current.indexOf('Playlists')}" to="/playlists">Playlists</router-link></li>
+        <li><router-link :class="{'active':!!~current.indexOf('Podcasts')}" to="/podcasts">Podcasts</router-link></li>
+        <li><router-link :class="{'active':!!~current.indexOf('Artists')}" to="/artists">Artists</router-link></li>
+        <li><router-link :class="{'active':!!~current.indexOf('Albums')}" to="/albums">Albums</router-link></li>
       </ul>
     </div>
   </div>
