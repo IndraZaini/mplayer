@@ -16,6 +16,7 @@ export default new Router({
   routes:[
     {
       path: '',
+      name: 'Home',
       redirect: {
         path: '/home',
         name: 'Home',
