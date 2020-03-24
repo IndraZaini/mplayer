@@ -1,0 +1,92 @@
+.liked-page{
+  overflow-y: scroll;
+  background: linear-gradient(rgba(59, 59, 59, 0), rgba(19, 19, 19, 1) 50%),
+              linear-gradient(rgba(59, 59, 59, 1), rgba(19, 19, 19, 1) 100%);
+  .container{
+    padding: 25px 35px;
+    display: flex;
+    .left{
+      flex: 4 1 0;
+      .img{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 100%),
+                    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 100%),
+                    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 100%);
+        img{
+          max-width: 33%;
+          object-fit: contain;
+        }
+      }
+      .img:after{
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+      }
+      .title{
+        padding-top: 15px;
+        font-size: 26px;  
+        font-weight: bold;
+        text-align: center;
+      }
+      .hoverplay{
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0);
+        opacity: 0;
+        transition: 0.1s;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .play, .pause{
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          background: url(../assets/play.png);
+          background-size: 55%;
+          background-position: 18px center;
+          background-repeat: no-repeat;
+          border-radius: 100px;
+          border: 1px solid #a3a3a3;
+          transition: 0.1s;
+          &:hover{
+            transform: scale(1.07);
+            border: 1px solid #fff;
+          }
+          &:active{
+            transform: scale(1);
+            border: 1px solid #fff;
+          }
+        }
+        .pause{
+          background: url(../assets/pause.png);
+          background-size: 55%;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+      .img:hover .hoverplay{
+        background: rgba(0,0,0,0.6);
+        opacity: 1;
+      }
+    }
+    .right{
+      flex: 13 1 0;
+    }
+  }
+}
+
+.buttonplay{
+  margin: 36px auto auto auto;
+  width: 110px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 12px;
+  background: #20b954;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-radius: 100px;
+}

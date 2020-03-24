@@ -1,0 +1,55 @@
+.song{
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+  padding: 20px;
+  background: rgba(45,45,45,1);
+  margin: 18px 18px 0 0;
+  border-radius: 7px;
+  justify-content: space-evenly;
+  cursor: pointer;
+  .image{
+    display: flex;
+    min-width: 132px;
+    width: 100%;
+    position: relative;
+    background:rgba(255,255,255,0.9);
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    img{
+      max-width: 100%;
+    }
+  }
+  .image:after{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+  .name{
+    min-width: 132px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    font-weight: 500;
+    font-size: 13px;
+    margin-top: 18px;
+    letter-spacing: 0.3px;
+    width: 100%;
+  }
+  .artist{
+    line-height: 1.5em;
+    line-height: 1.5;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    min-width: 132px;
+    font-size: 11px;
+    margin: 6px 0 15px;
+    color: rgb(170,170,170);
+    width: 100%;
+  }
+}

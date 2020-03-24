@@ -1,0 +1,40 @@
+.playlistsong{
+  margin-top: 15px;
+  max-height: 185px;
+  overflow-y: auto;
+  a{
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    opacity: 0.6;
+    transition: .1s; 
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 32px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0); 
+  margin: 6px 0;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: rgba(80, 80, 80, 0.2); 
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  transition: 0.3s;
+  background: #555; 
+}
