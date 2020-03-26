@@ -15,7 +15,7 @@ export default new Router({
   base: '/',
   routes:[
     {
-      path: '/mplayer',
+      path: '',
       redirect: {
         name: 'Home'
       }
