@@ -1,5 +1,5 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-var path = require('path');
+const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 const { HotModuleReplacementPlugin } = require('webpack');
 
