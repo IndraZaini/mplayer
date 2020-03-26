@@ -21,22 +21,22 @@ export default new Router({
       }
     },
     {
-      path: './home',
+      path: '/home',
       name: 'Home',
       component: Home,
     },
     {
-      path: './search',
+      path: '/search',
       name: 'Search',
       component: Search,
     },
     {
-      path: './liked',
+      path: '/liked',
       name: 'Liked',
       component: Liked,
     },
     {
-      path: './yourlibrary',
+      path: '/yourlibrary',
       component: YourLibrary,
       children: [
         {
@@ -46,22 +46,22 @@ export default new Router({
           }
         },
         {
-          path: './playlists',
+          path: '/playlists',
           name: 'YourLibPlaylists',
           component: Playlists,
         },
         {
-          path: './podcasts',
+          path: '/podcasts',
           name: 'YourLibPodcasts',
           component: Podcasts,
         },
         {
-          path: './artists',
+          path: '/artists',
           name: 'YourLibArtists',
           component: Artists,
         },
         {
-          path: './albums',
+          path: '/albums',
           name: 'YourLibAlbums',
           component: Albums,
         }
