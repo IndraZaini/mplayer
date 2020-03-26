@@ -77,7 +77,7 @@ module.exports = {
   }
   
 if (process.env.NODE_ENV === 'production') {
-
+  console.log('test')
   module.exports.output.publicPath = '/<REPO_NAME>/dist/';
 
   module.exports.devtool = '#source-map';
