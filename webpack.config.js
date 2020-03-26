@@ -50,7 +50,7 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 10000,
-              filename: 'assets/[hash]-[name].[ext]',
+              name: 'assets/[hash]-[name].[ext]',
               esModule: false,
             }
           }]
