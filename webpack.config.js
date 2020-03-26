@@ -76,7 +76,7 @@ module.exports = {
     ],
   }
   
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'development') {
   module.exports.output.publicPath = '/mplayer/<REPO_NAME>/dist/';
 
   module.exports.devtool = '#source-map';
