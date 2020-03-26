@@ -4,7 +4,7 @@ const { VueLoaderPlugin } = require('vue-loader');
 const { HotModuleReplacementPlugin } = require('webpack');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: path.join(__dirname,'/src/index.js'),
     output: {
       path: path.resolve(__dirname, 'dist'),
