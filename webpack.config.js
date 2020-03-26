@@ -1,13 +1,13 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-var path = require('path');
+const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 const { HotModuleReplacementPlugin } = require('webpack');
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     entry: path.join(__dirname,'/src/index.js'),
     output: {
-      path: path.resolve(__dirname, 'dist'),
+      path: path.join(__dirname, 'dist'),
       filename: 'app.bundled.js',
     },
     devServer: {
