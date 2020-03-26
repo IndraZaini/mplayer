@@ -17,7 +17,6 @@ export default {
   methods: {
     playSong(song) {
       this.$store.dispatch('playSong',song)
-      bus.$emit('resetSong')
     }
   }
 }

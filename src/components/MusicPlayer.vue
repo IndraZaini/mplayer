@@ -11,10 +11,10 @@
     <div class="controllercontainer">
       <div class="control">
         <div class="icon shuffle"></div>
-        <div class="icon prev"></div>
+        <div class="icon prev" :class="{first : this.first}" @click="playPrev()"></div>
         <div v-if="playing == false" class="icon play" @click="play(song)"></div>
         <div v-else class="icon pause" @click="play(song)"></div>
-        <div class="icon next"></div>
+        <div class="icon next" @click="playNext()"></div>
         <div class="icon loop"></div>
       </div> 
       <div class="songbar">
@@ -45,8 +45,6 @@ export default {
   },
   mounted() {
     bus.$on('resetSong', () => {
-      this.audio.pause()
-      this.playing = false
       this.audio.src = ''
       this.audio = new Audio(this.song.dir)
       this.audio.volume = this.vol,
@@ -57,11 +55,29 @@ export default {
       this.audio.ontimeupdate = () => {
         this.currentdur = this.audio.currentTime
       }
-    })  
+    }),
+    bus.$on('playNew', () => {
+      this.audio.currentTime = 0
+      this.audio.pause()
+      this.playing = false
+    }),
+    bus.$on('playFromList', () => {
+      this.$store.dispatch('playFromList')
+      this.playing ? this.audio.pause() : this.audio.play()
+      this.playing = !this.playing
+    })
   },
   watch: {
     vol:function(newValue){
       this.audio.volume = newValue
+    },
+    currentdur:function(){ 
+      if(this.audio.currentTime == this.audio.duration){
+        this.playNext()
+      }
+    },
+    playing:function(){
+      bus.$emit('play')
     }
   },
   computed: {
@@ -96,6 +112,12 @@ export default {
     },
     song: {
       get : function() {return this.$store.state.playingsong},
+    },
+    last() {
+      return (this.$store.state.indexplaying == this.$store.state.songs.length-1)
+    },
+    first() {
+      return (this.$store.state.indexplaying == 0)
     }
   },
   methods: {
@@ -103,9 +125,33 @@ export default {
       this.$store.dispatch('likeSong', this.song.id)  
     },
     play(song){
-      this.playing ? this.audio.pause() : this.audio.play()
-      this.playing = !this.playing
+      if(this.song.id != 0){
+        this.playing ? this.audio.pause() : this.audio.play()
+        this.playing = !this.playing
+      }
     },
+    playNext(){
+      this.$store.dispatch('playNext', this.song.id)
+      if(this.playing == true){
+        this.audio.play()
+        this.playing = true
+      }
+    },
+    playPrev(){
+      if(this.currentdur < 2){
+        this.$store.dispatch('playPrev', this.song.id)
+        bus.$emit('resetSong')
+        if(!this.first){
+          if(this.playing == true){
+            this.audio.play()
+            this.playing = true
+          }
+        }
+      }
+      else{
+        this.audio.currentTime = 0
+      }
+    }
   }
 }
 </script>

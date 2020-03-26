@@ -1,7 +1,7 @@
 .liked-page{
   overflow-y: scroll;
   background: linear-gradient(rgba(59, 59, 59, 0), rgba(19, 19, 19, 1) 50%),
-              linear-gradient(rgba(59, 59, 59, 1), rgba(19, 19, 19, 1) 100%);
+              linear-gradient(rgb(62,75,80), rgba(19, 19, 19, 1) 100%);
   .container{
     padding: 25px 35px;
     display: flex;
@@ -52,7 +52,7 @@
           border: 1px solid #a3a3a3;
           transition: 0.1s;
           &:hover{
-            transform: scale(1.07);
+            transform: scale(1.05);
             border: 1px solid #fff;
           }
           &:active{
@@ -78,7 +78,7 @@
   }
 }
 
-.buttonplay{
+.button{
   margin: 36px auto auto auto;
   width: 110px;
   text-transform: uppercase;
@@ -89,4 +89,10 @@
   letter-spacing: 1px;
   font-weight: 500;
   border-radius: 100px;
+  cursor: pointer;
+  transform: scale(1);
+  &:hover{
+    transform: scale(1.03);
+    background: #4cce77;
+  }
 }

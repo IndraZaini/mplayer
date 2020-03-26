@@ -1,7 +1,7 @@
 <template>
   <div class="playlistsong">
-    <div v-for="song in playlist" :key="song.id">
-      <router-link to="/">{{song.name}}</router-link>
+    <div v-for="playlist in playlist" :key="playlist.id">
+      <router-link to="/">{{playlist.name}}</router-link>
     </div>
   </div>
 </template>
