@@ -11,8 +11,8 @@ import Liked from './components/Liked.vue'
 Vue.use(Router);
 
 export default new Router({
-  
-  base: '/',
+  mode: 'history',
+  base: '',
   routes:[
     {
       path: '',
@@ -21,7 +21,7 @@ export default new Router({
       }
     },
     {
-      path: 'mplayer/home',
+      path: '/home',
       name: 'Home',
       component: Home,
     },
