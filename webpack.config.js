@@ -7,7 +7,7 @@ module.exports = {
     mode: 'development',
     entry: path.join(__dirname,'/src/index.js'),
     output: {
-      path: path.resolve(__dirname,'dist'),
+      path: path.join(__dirname,'dist'),
       filename: 'app.bundled.js',
     },
     devServer: {
@@ -47,7 +47,7 @@ module.exports = {
         {
           test: /\.(png|jp(e*)g|svg|mp3)$/,
           use: [{
-            loader: 'url-loader',
+            loader: 'file-loader',
             options: {
               limit: 10000,
               name: 'assets/[hash]-[name].[ext]',
