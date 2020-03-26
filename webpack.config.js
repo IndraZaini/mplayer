@@ -2,7 +2,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 const { HotModuleReplacementPlugin } = require('webpack');
-
+__webpack_public_path__ = `/mplayer/assets`
 module.exports = {
     mode: 'development',
     entry: path.join(__dirname,'/src/index.js'),  
