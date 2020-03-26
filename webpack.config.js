@@ -1,5 +1,5 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-var path = require('path');
+const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 const { HotModuleReplacementPlugin } = require('webpack');
 
@@ -47,7 +47,7 @@ module.exports = {
         {
           test: /\.(png|jp(e*)g|svg|mp3)$/,
           use: [{
-            loader: 'file-loader',
+            loader: 'url-loader',
             options: {
               limit: 10000,
               name: 'assets/[hash]-[name].[ext]',
