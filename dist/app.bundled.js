@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "efd900dc7219834ddbfc";
+/******/ 	var hotCurrentHash = "3a190f0a34950c7c817d";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -783,7 +783,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/dist/";
 /******/
 /******/ 	// __webpack_hash__
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
@@ -2077,7 +2077,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.bus = undefined;\n\nvar _vue = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.esm.js\");\n\nvar _vue2 = _interopRequireDefault(_vue);\n\nvar _App = __webpack_require__(/*! ./components/App.vue */ \"./src/components/App.vue\");\n\nvar _App2 = _interopRequireDefault(_App);\n\nvar _store = __webpack_require__(/*! ./store/store */ \"./src/store/store.js\");\n\n__webpack_require__(/*! ./style/index.less */ \"./src/style/index.less\");\n\nvar _router = __webpack_require__(/*! ./router.js */ \"./src/router.js\");\n\nvar _router2 = _interopRequireDefault(_router);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n__webpack_require__.p = '/mplayer/assets';\nvar bus = exports.bus = new _vue2.default();\nnew _vue2.default({\n    render: function render(h) {\n        return h(_App2.default);\n    },\n    store: _store.store,\n    router: _router2.default\n}).$mount('#app');\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.bus = undefined;\n\nvar _vue = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.esm.js\");\n\nvar _vue2 = _interopRequireDefault(_vue);\n\nvar _App = __webpack_require__(/*! ./components/App.vue */ \"./src/components/App.vue\");\n\nvar _App2 = _interopRequireDefault(_App);\n\nvar _store = __webpack_require__(/*! ./store/store */ \"./src/store/store.js\");\n\n__webpack_require__(/*! ./style/index.less */ \"./src/style/index.less\");\n\nvar _router = __webpack_require__(/*! ./router.js */ \"./src/router.js\");\n\nvar _router2 = _interopRequireDefault(_router);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar bus = exports.bus = new _vue2.default();\nnew _vue2.default({\n    render: function render(h) {\n        return h(_App2.default);\n    },\n    store: _store.store,\n    router: _router2.default\n}).$mount('#app');\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 

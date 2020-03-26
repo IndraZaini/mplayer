@@ -2,12 +2,12 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 const { HotModuleReplacementPlugin } = require('webpack');
-__webpack_public_path__ = `/mplayer/assets`
 module.exports = {
     mode: 'development',
     entry: path.join(__dirname,'/src/index.js'),  
     output: {
-      path: path.join(__dirname,'dist'),
+      path: path.resolve(__dirname,'./dist'),
+      publicPath: '/dist/',
       filename: 'app.bundled.js',
     },
     devServer: {
@@ -73,4 +73,20 @@ module.exports = {
         template: path.join(__dirname, 'index.html'),
       })
     ],
+  }
+  if (process.env.NODE_ENV === 'production') {
+
+    module.exports.output.publicPath = '/<REPO_NAME>/dist/';
+  
+    module.exports.devtool = '#source-map';
+    module.exports.plugins = (module.exports.plugins || []).concat([
+      new webpack.DefinePlugin({
+        'process.env': {
+          NODE_ENV: '"production"'
+        }
+      }),
+      new webpack.LoaderOptionsPlugin({
+        minimize: true
+      })
+    ])
   }
