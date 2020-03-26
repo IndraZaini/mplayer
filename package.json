@@ -12,7 +12,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "hompage": "https://indrazaini.github.io",
+  "hompage": "https://indrazaini.github.io/mplayer",
   "devDependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "babel-core": "^6.26.3",
