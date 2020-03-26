@@ -47,7 +47,7 @@ module.exports = {
         {
           test: /\.(png|jp(e*)g|svg|mp3)$/,
           use: [{
-            loader: 'file-loader',
+            loader: 'url-loader',
             options: {
               limit: 10000,
               name: 'assets/[hash]-[name].[ext]',
@@ -55,6 +55,8 @@ module.exports = {
             }
           }]
         },
+        
+        
       ]
     },
     resolve: {
@@ -74,5 +76,3 @@ module.exports = {
       })
     ],
   }
-  
-
