@@ -8,6 +8,7 @@ module.exports = {
     entry: path.join(__dirname,'/src/index.js'),
     output: {
       path: path.resolve(__dirname,'./dist'),
+      publicPath: '/dist/',
       filename: 'app.bundled.js',
     },
     devServer: {
