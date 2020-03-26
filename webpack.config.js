@@ -4,11 +4,10 @@ const { VueLoaderPlugin } = require('vue-loader');
 const { HotModuleReplacementPlugin } = require('webpack');
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     entry: path.join(__dirname,'/src/index.js'),
     output: {
       path: path.join(__dirname,'dist'),
-      publicPath: '/dist/',
       filename: 'app.bundled.js',
     },
     devServer: {
@@ -48,7 +47,7 @@ module.exports = {
         {
           test: /\.(png|jp(e*)g|svg|mp3)$/,
           use: [{
-            loader: 'url-loader',
+            loader: 'file-loader',
             options: {
               limit: 10000,
               name: 'assets/[hash]-[name].[ext]',
@@ -79,7 +78,7 @@ module.exports = {
 
 if (process.env.NODE_ENV === 'production') {
 
-  module.exports.output.publicPath = '/mplayer/dist/';
+  module.exports.output.publicPath = '/<REPO_NAME>/dist/';
 
   module.exports.devtool = '#source-map';
   // http://vue-loader.vuejs.org/en/workflow/production.html
