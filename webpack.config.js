@@ -78,7 +78,7 @@ module.exports = {
 
 if (process.env.NODE_ENV === 'production') {
 
-  module.exports.output.publicPath = '/<REPO_NAME>/assets/';
+  module.exports.output.publicPath = '/https://indrazaini.github.io/assets/';
 
   module.exports.devtool = '#source-map';
   // http://vue-loader.vuejs.org/en/workflow/production.html
