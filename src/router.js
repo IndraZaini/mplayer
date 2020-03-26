@@ -21,7 +21,7 @@ export default new Router({
       }
     },
     {
-      path: '/home',
+      path: '/mplayer/home',
       name: 'Home',
       component: Home,
     },
