@@ -50,7 +50,7 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 10000,
-              filename: 'static/assets/[hash]-[name].[ext]',
+              filename: 'mplayer/assets/[hash]-[name].[ext]',
               esModule: false,
             }
           }]
