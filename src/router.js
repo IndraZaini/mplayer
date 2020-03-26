@@ -12,7 +12,7 @@ Vue.use(Router);
 
 export default new Router({
   mode: 'history',
-  base: '/',
+  base: '/mplayer',
   routes:[
     {
       path: '',
@@ -21,7 +21,7 @@ export default new Router({
       }
     },
     {
-      path: '/mplayer/home',
+      path: '/home',
       name: 'Home',
       component: Home,
     },
