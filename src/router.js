@@ -12,16 +12,16 @@ Vue.use(Router);
 
 export default new Router({
   mode: 'history',
-  base: '/',
+  base: '/mplayer',
   routes:[
     {
-      path: '/',
+      path: '/mplayer',
       redirect: {
         name: 'Home'
       }
     },
     {
-      path: 'mplayer/home',
+      path: '/home',
       name: 'Home',
       component: Home,
     },
