@@ -65,7 +65,7 @@ export const store = new Vuex.Store({
         id: 1,
         name: "Can't Help Falling In Love",
         artist: 'Haley Reinhart',
-        dir: require('.././assets/Songs/test1.mp3'),
+        dir: require('../assets/Songs/test1.mp3'),
         img: require('../assets/musical-note.png'),
         dur: '3 : 53',
         liked: true,
