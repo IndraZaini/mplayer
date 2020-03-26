@@ -46,8 +46,7 @@ export default {
   mounted() {
     bus.$on('resetSong', () => {
       this.audio.src = ''
-      this.audio = new Audio()
-      this.audio.src = this.song.dir
+      this.audio = new Audio(this.song.dir)
       this.audio.volume = this.vol,
       this.audio.onloadedmetadata = () => {
         this.maxdur = this.audio.duration
