@@ -6,7 +6,7 @@
         <div class="title">{{song.name}}</div>
         <div class="artist">{{song.artist}}</div>
       </div>
-      <div v-if="song.id != 0" class="like" :class="{'green' : song.liked}" @click="addLiked()"></div>
+      <div v-if="song.id != 0" class="like" :class="{'green' : this.$store.state.playlists[0].songs.includes(song.id)}" @click="addLiked()"></div>
     </div>
     <div class="controllercontainer">
       <div class="control">

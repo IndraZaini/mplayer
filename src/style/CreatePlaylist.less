@@ -1,0 +1,87 @@
+.createplaylist{
+  z-index: 10;
+  background: rgba(0,0,0,0.9);  
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  .close{
+    margin-top: 140px;
+    min-width: 32px;
+    min-height: 32px;
+    background: url(../assets/cancel.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  .title{
+    margin-top: 34px;
+    font-size: 43px;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+  }
+  .input{
+    height: 150px;
+    margin-top: 16px;
+    width: 100%;
+    background: #282828;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    .label{
+      width: 800px;
+      font-weight: 600;
+      font-size: 12.5px;
+      margin-left: 5px;
+    }
+    input[type=text]{
+      margin-top: 10px;
+      font-size: 44px;
+      font-weight: bold;
+      width: 800px;
+      background: rgba(0,0,0,0);
+      border: 0px;
+      letter-spacing: -1px;
+      outline: 0;
+      caret-color:#1db954;
+    }
+    input[type=text]::placeholder{
+      color:#535353;
+    }
+  }
+  .btncontainer{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    .button{
+      margin: 28px auto auto auto;
+      width: 130px;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 12px;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      font-weight: 500;
+      border-radius: 100px;
+      cursor: pointer;
+      transform: scale(1);
+      &:hover{
+        transform: scale(1.05);
+      }
+    }
+    .create{
+      background: #20b954;
+      &:hover{
+        background: #4cce77;
+      }
+    }
+    .cancel{
+      padding: 10px;
+      background: rgba(0,0,0,0);
+      border: 2px solid #fff;
+    }
+  }
+}

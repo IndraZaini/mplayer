@@ -6,8 +6,8 @@ import router from './router.js'
 
 export const bus = new Vue()
 new Vue({
-    render: h => h(App),
-    store: store,
-    router: router,
+  render: h => h(App),
+  store: store,
+  router: router,
 }).$mount('#app')
 

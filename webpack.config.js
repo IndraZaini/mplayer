@@ -70,7 +70,7 @@ module.exports = {
         showErrors: true,
         cache: true,
         title: 'Vue with Webpack',
-        template: path.join(__dirname, 'index.html'),
+        template: path.join(__dirname, '/index.html'),
       })
     ],
   }

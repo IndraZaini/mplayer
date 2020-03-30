@@ -5,6 +5,32 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
 	state: {
+    indexplaying: -1,
+    isOpen: false,
+    idForPlaylist: 1,
+    playlists: [
+      {
+        id: 0,
+        name: 'Liked',
+        songs: [
+          2, 1, 6, 3
+        ]
+      },
+      {
+        id: 1,
+        name: 'Accoustic Songs Cover',
+        songs: [
+          2, 3, 8
+        ]
+      },
+      {
+        id: 2,
+        name: 'Indonesian Songs',
+        songs: [
+          2, 3, 7, 8, 9, 10
+        ]
+      },
+    ],
     playingsong: {
       id: 0,
       name: "",
@@ -17,49 +43,6 @@ export const store = new Vuex.Store({
       artist: '',
       dir: '',
     },
-    indexplaying: -1,
-    playlistsongs: [
-      {
-        id: 1,
-        name: 'Playlist Chill and Vibing',
-      },
-      {
-        id: 2,
-        name: 'Most Played Songs',
-      },
-      {
-        id: 3,
-        name: 'New Top Songs Favourite 2019',
-      },
-      {
-        id: 4,
-        name: 'Top Love Songs 2019',
-      },
-      {
-        id: 5,
-        name: 'Best Playlist',
-      },
-      {
-        id: 6,
-        name: 'Playlist Top Rock Songs 2019',
-      },
-      {
-        id: 7,
-        name: 'Playlist Top Metallica Songs 2019',
-      },
-      {
-        id: 8,
-        name: 'Best Pop Songs 2019',
-      },
-      {
-        id: 9,
-        name: 'Playlist Top Songs 2019',
-      },
-      {
-        id: 10,
-        name: 'Playlist Top Songs 2019',
-      }
-    ],
     songs: [
       {
         id: 1,
@@ -68,7 +51,6 @@ export const store = new Vuex.Store({
         dir: require('../assets/Songs/test1.mp3'),
         img: require('../assets/musical-note.png'),
         dur: '3 : 53',
-        liked: true,
       },
       {
         id: 2,
@@ -77,7 +59,6 @@ export const store = new Vuex.Store({
         dir: require('../assets/Songs/test.mp3'),
         img: require('../assets/musical-note.png'),
         dur: '5 : 46',
-        liked: true,
       },
       {
         id: 3,
@@ -86,7 +67,6 @@ export const store = new Vuex.Store({
         dir: require('../assets/Songs/test2.mp3'),
         img: require('../assets/musical-note.png'),
         dur: '4 : 15',
-        liked: true,
       },
       {
         id: 4,
@@ -95,7 +75,6 @@ export const store = new Vuex.Store({
         dir: require('../assets/Songs/test3.mp3'),
         img: require('../assets/musical-note.png'),
         dur: '5 : 20',
-        liked: true,
       },
       {
         id: 5,
@@ -104,7 +83,6 @@ export const store = new Vuex.Store({
         dir: require('../assets/Songs/test4.mp3'),
         img: require('../assets/musical-note.png'),
         dur: '7 : 41',
-        liked: true,
       },
       {
         id: 6,
@@ -113,7 +91,6 @@ export const store = new Vuex.Store({
         dir: require('../assets/Songs/test5.mp3'),
         img: require('../assets/musical-note.png'),
         dur: '5 : 49',
-        liked: true,
       },
       {
         id: 7,
@@ -122,7 +99,6 @@ export const store = new Vuex.Store({
         dir: require('../assets/Songs/test6.mp3'),
         img: require('../assets/musical-note.png'),
         dur: '4 : 02',
-        liked: true,
       },
       {
         id: 8,
@@ -131,7 +107,6 @@ export const store = new Vuex.Store({
         dir: require('../assets/Songs/test7.mp3'),
         img: require('../assets/musical-note.png'),
         dur: '4 : 23',
-        liked: true,
       },
       {
         id: 9,
@@ -140,7 +115,6 @@ export const store = new Vuex.Store({
         dir: require('../assets/Songs/test8.mp3'),
         img: require('../assets/musical-note.png'),
         dur: '5 : 05',
-        liked: true,
       },
       {
         id: 10,
@@ -149,7 +123,6 @@ export const store = new Vuex.Store({
         dir: require('../assets/Songs/test9.mp3'),
         img: require('../assets/musical-note.png'),
         dur: '5 : 36',
-        liked: true,
       },
     ],
 	},
@@ -159,9 +132,6 @@ export const store = new Vuex.Store({
 	mutations: {
 		changeActive(current){
 			this.state.current = current
-    },
-    addLiked(){
-      
     },
     playFromList(state){
       if(state.playingsong.id == 0){
@@ -178,7 +148,13 @@ export const store = new Vuex.Store({
       bus.$emit('playNew')
     },
     likeSong: (state, id) => {
-      state.songs.find(song => song.id == id).liked = !state.songs.find(song => song.id == id).liked
+      if(state.playlists[0].songs.find(song => song == id) != undefined){
+        state.playlists[0].songs.splice(state.playlists[0].songs.indexOf(id), 1)
+        bus.$emit('showNotification', 'Removed from your Liked Songs')
+      }else{
+        state.playlists[0].songs.push(id)
+        bus.$emit('showNotification', 'Added to your Liked Songs')
+      }
     },
     playNext: (state, id) => {
       state.currsong = Object.assign(state.songs.find(song => song.id == id))

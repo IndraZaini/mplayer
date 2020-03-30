@@ -23,10 +23,13 @@
 import { bus } from '../index'
 import PlaylistSong from './SongPlaylist.vue'
 export default {
-  name: 'Liked',
+  name: 'YourPLaylist',
   components: {
     PlaylistSong,
   },
+  props: [
+    'playlistId',
+  ],
   mounted(){
     bus.$on('play', () => {
       this.playing = !this.playing
@@ -38,9 +41,15 @@ export default {
     }
   },
   computed: {
+    id(){
+      if(this.playlistId == undefined)
+        return 0
+      else
+        return this.playlistId
+    },
     songs(){
-      var likedsong = Object.assign(this.$store.state.playlists.find(playlist => playlist.id == 0))
-      return this.$store.state.songs.filter(song => likedsong.songs.includes(song.id))
+      var playlistsong = Object.assign(this.$store.state.playlists.find(playlist => playlist.id == this.id))
+      return this.$store.state.songs.filter(song => playlistsong.songs.includes(song.id))
     }
   },
   methods: {

@@ -1,7 +1,7 @@
 <template>
   <div class="playlistsong">
     <div v-for="playlist in playlist" :key="playlist.id">
-      <router-link to="/">{{playlist.name}}</router-link>
+      <router-link :to="{ name: 'Playlists', params: { playlistId: playlist.id }}">{{playlist.name}}</router-link>
     </div>
   </div>
 </template>
@@ -10,8 +10,12 @@ export default {
   name: 'PlaylistSongs',
   data(){
     return{
-      playlist: this.$store.state.playlistsongs,
     }
+  },
+  computed: {
+    playlist(){
+      return this.$store.state.playlists.filter(playlist => playlist.id != 0)
+    },
   }
 }
 </script>

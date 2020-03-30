@@ -1,0 +1,22 @@
+.notificationalert{
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  bottom: 110px;
+  display: flex;
+  justify-content: center;
+  .message{
+    padding: 13px 24px;
+    background: #20b954;
+    border-radius: 7px;
+    box-shadow: 0 0 4px 4px rgba(0,0,0,0.24), 0 0 20px -2px rgba(0,0,0,0.48);
+  }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: all .5s ease;
+}
+.fade-enter, .fade-leave-to{
+  opacity: 0;
+  transform: translateY(7px);
+}

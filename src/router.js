@@ -8,6 +8,7 @@ import Podcasts from './components/Podcasts.vue'
 import Artists from './components/Artists.vue'
 import Albums from './components/Albums.vue'
 import Liked from './components/Liked.vue'
+import YourPlaylist from './components/YourPlaylist.vue'
 Vue.use(Router);
 
 export default new Router({
@@ -34,6 +35,12 @@ export default new Router({
       path: '/liked',
       name: 'Liked',
       component: Liked,
+    },
+    {
+      path: '/playlists/:playlistId',
+      name: 'Playlists',
+      component: YourPlaylist,
+      props: true,
     },
     {
       path: '/yourlibrary',

@@ -1,14 +1,16 @@
 <template>
   <div @click="playSong(song)" class="songplaylist">
     <div style="display: flex">
-      <div class="img"><img src="../assets/musical-notewhite.png"></div>
+      <div class="img"></div>
       <div> 
         <div class="name">{{song.name}}</div>
         <div class="artist">{{song.artist}}</div>
       </div>
     </div>
-    <div class="menu"></div>
-    <div class="duration">{{song.dur}}</div>
+    <div style="display: flex">
+      <div class="menu"></div>
+      <div class="duration">{{song.dur}}</div>
+    </div>
   </div>
 </template>
 <script>
